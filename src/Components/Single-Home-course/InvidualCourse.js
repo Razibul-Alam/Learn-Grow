@@ -1,20 +1,21 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import { Card, CardGroup, Button } from 'react-bootstrap';
 const InvidualCourse = ({course}) => {
     const{title,imgUrl,tutor,price}=course;
     return (
-        <div className='col-lg-4'>
+        <div className='col-lg-4 text-center'>
              <CardGroup>
         <Card>
           <Card.Img variant="top" src={imgUrl} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>
-             {tutor}
+             <h6>{tutor}</h6>
             </Card.Text>
             <Card.Text>
-             Price: {price}
+             <h6>Price: {price}</h6>
             </Card.Text>
+            <Button variant="primary">Buy Course</Button>
           </Card.Body>
         </Card>
       </CardGroup>
