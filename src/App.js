@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header-Page/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './Components/Footer/Footer';
+import HomePage from './Components/Home-Page/HomePage';
+import myDatabase from './My-database/myDatabase.json'
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
+import { createContext, useState } from 'react';
+import AboutPage from './Components/About-Page/AboutPage';
+import NotFound from './Components/Not-Found-Page/NotFound';
+import AllService from './Components/Services-Page/AllService';
+
+export const coursesContext=createContext()
 function App() {
+  const[courses,setCourses]=useState(myDatabase);
+  console.log(courses)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <coursesContext.Provider value={[courses,setCourses]}>
+    <Router>
+    <Header/>
+     <div className="container">
+     <Switch>
+     <Route exact path="/about">
+    <AboutPage/>
+     </Route>
+     <Route exact path="/service">
+    <AllService/>
+     </Route>
+     <Route exact path="/reveiw">
+    <AboutPage/>
+     </Route>
+     <Route exact path="/">
+    <HomePage/>
+     </Route>
+     <Route exact path="*">
+    <NotFound/>
+     </Route>
+     </Switch>
+     </div>
+     <Footer/>
+    </Router>
+    </coursesContext.Provider>
   );
 }
 
