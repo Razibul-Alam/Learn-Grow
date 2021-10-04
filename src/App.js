@@ -15,6 +15,7 @@ import { createContext, useState } from 'react';
 import AboutPage from './Components/About-Page/AboutPage';
 import NotFound from './Components/Not-Found-Page/NotFound';
 import AllService from './Components/Services-Page/AllService';
+import DashBoard from './Components/Dashboard/DashBoard';
 
 export const coursesContext=createContext()
 function App() {
@@ -24,10 +25,12 @@ function App() {
     <coursesContext.Provider value={[courses,setCourses]}>
     <Router>
     <Header/>
-     <div className="container">
      <Switch>
      <Route exact path="/about">
     <AboutPage/>
+     </Route>
+     <Route exact path="/dashboard">
+    <DashBoard/>
      </Route>
      <Route exact path="/service">
     <AllService/>
@@ -42,7 +45,6 @@ function App() {
     <NotFound/>
      </Route>
      </Switch>
-     </div>
      <Footer/>
     </Router>
     </coursesContext.Provider>

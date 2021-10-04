@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
 const InvidualCourse = ({course}) => {
-    const{title,imgUrl,tutor}=course;
+    const{title,imgUrl,tutor,price}=course;
     return (
         <div className='col-lg-4'>
              <CardGroup>
@@ -11,6 +11,9 @@ const InvidualCourse = ({course}) => {
             <Card.Title>{title}</Card.Title>
             <Card.Text>
              {tutor}
+            </Card.Text>
+            <Card.Text>
+             Price: {price}
             </Card.Text>
           </Card.Body>
         </Card>

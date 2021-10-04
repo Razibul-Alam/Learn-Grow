@@ -4,15 +4,9 @@ import FooterOthers from './FooterOthers';
 
 const Footer = () => {
     return (
-        <div className="row">
-            <div className="col-lg-4">
+        <div>
             <FooterSocial/>  
-            </div>
-         <div className="col-lg-8">
-         <FooterOthers/>
          </div>
-          
-        </div>
     );
 };
 

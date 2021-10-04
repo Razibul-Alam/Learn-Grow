@@ -7,7 +7,7 @@ const HomeCourse = () => {
     const[courses]=useContext(coursesContext)
     return (
         <div className='row my-5'>
-         {courses.map(course=><InvidualCourse course={course}/>)}   
+         {courses.slice(0,3).map(course=><InvidualCourse course={course}/>)}   
         </div>
     );
 };

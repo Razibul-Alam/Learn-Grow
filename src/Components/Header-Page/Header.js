@@ -10,14 +10,11 @@ import {
     NavLink
   } from "react-router-dom";
 const Header = () => {
-  // const [loggedInUser, setLoggedInUser] = useContext(userContext);
   const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true);
     return (
       <>
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light py-3" variant="light">
         
         <Navbar.Brand href="#home">Learn & Grow</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -26,7 +23,7 @@ const Header = () => {
            <Nav.Link as={Link}  to='/' className="me-3">Home</Nav.Link>
            <Nav.Link as={Link}  to='/about' className="me-3">About</Nav.Link>
            <Nav.Link as={Link}  to='/service' className="me-3">Services</Nav.Link>
-           <Nav.Link as={Link}  to='/reveiw' className="me-3">Reveiw</Nav.Link>
+           <Nav.Link as={Link}  to='/dashboard' className="me-3">Dashboard</Nav.Link>
            <Nav.Link as={Link} to='/login' className="me-4">
             </Nav.Link>
           </Nav>
