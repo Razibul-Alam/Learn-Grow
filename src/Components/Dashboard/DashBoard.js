@@ -9,7 +9,7 @@ const DashBoard = () => {
     return (
     <>
     <section className='row'>
-        <div className="bg-dark dashboard col-lg-3">
+        <div className="bg-dark dashboard col-lg-2">
 
      <div className="d-flex justify-content-center mt-2">
      <ButtonGroup vertical>

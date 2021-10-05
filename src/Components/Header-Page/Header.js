@@ -16,7 +16,7 @@ const Header = () => {
       <>
         <Navbar collapseOnSelect expand="lg" bg="light py-3" variant="light">
         
-        <Navbar.Brand href="#home"><img className="header-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdWzeWl2uFn914wppHeSNA8Kj0sud4Jc8o9g&usqp=CAU" alt="" /></Navbar.Brand>
+        <Navbar.Brand href="#home" className='text-danger fw-bolder'>LEARN & GROW</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="ms-auto fw-bolder mt-2">

@@ -4,7 +4,7 @@ import FooterOthers from './FooterOthers';
 
 const Footer = () => {
     return (
-        <div>
+        <div className='text-center'>
             <FooterSocial/>  
          </div>
     );
