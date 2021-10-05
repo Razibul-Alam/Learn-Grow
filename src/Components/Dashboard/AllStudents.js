@@ -12,7 +12,9 @@ setStudents(remainStudents)
     return (
       <>
     <AddStudent students={students} setStudents={setStudents}/>
-        <Table striped bordered hover size="sm" className="mt-5">
+    <hr />
+    <h3 className='text-center mt-4 text-danger'> Total Students {students.length}</h3>
+        <Table striped bordered hover size="sm" className="mt-3">
   <thead>
     <tr>
       <th>Id</th>

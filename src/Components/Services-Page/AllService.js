@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FormControl, InputGroup } from 'react-bootstrap';
 import { coursesContext } from '../../App';
 import InvidualCourse from './../Single-Home-course/InvidualCourse';
 
 const AllService = () => {
     const[courses]=useContext(coursesContext)
+    const[showButton,setShowButton]=useState(true)
     return (
         <>
         <div className="w-50 m-auto mt-5">
@@ -18,7 +19,7 @@ const AllService = () => {
   </InputGroup>
         </div>
             <div className='row my-5 g-4'>
-         {courses.map(course=><InvidualCourse course={course}/>)}   
+         {courses.map(course=><InvidualCourse course={course} showButton={showButton}/>)}   
          </div>
         </>
     );

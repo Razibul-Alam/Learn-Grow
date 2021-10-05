@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
-const InvidualCourse = ({course}) => {
+const InvidualCourse = ({course,showButton}) => {
     const{title,imgUrl,tutor,price}=course;
     return (
-        <div className='col-lg-3 text-center'>
+        <div className='col-lg-3'>
              <CardGroup>
         <Card>
           <Card.Img variant="top" src={imgUrl} />
@@ -15,7 +15,7 @@ const InvidualCourse = ({course}) => {
             <Card.Text>
              <h6>Price: {price}</h6>
             </Card.Text>
-            <Button variant="primary">Enroll</Button>
+            {showButton&&<Button variant="primary">Enroll</Button>}
           </Card.Body>
         </Card>
       </CardGroup>

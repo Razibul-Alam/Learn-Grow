@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const BannerSection = () => {
     return (
@@ -9,7 +10,7 @@ const BannerSection = () => {
               <div className='text-center'>
               <h2>Come Learn With Us</h2>
         <h5>Become a skilled person and change <br /> lives — including your own</h5>
-              <Button variant="primary" size="lg">
+              <Button as={Link}  to='/service' variant="primary" size="lg">
       Get Started
     </Button>
               </div>
