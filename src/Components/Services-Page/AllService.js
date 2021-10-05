@@ -18,6 +18,8 @@ const AllService = () => {
     <InputGroup.Text id="basic-addon2" className="text-danger">Search</InputGroup.Text>
   </InputGroup>
         </div>
+        <h2 className='text-success text-center mt-5'>All services</h2>
+        <hr className='w-25 m-auto text-danger' />
             <div className='row my-5 g-4'>
          {courses.map(course=><InvidualCourse course={course} showButton={showButton}/>)}   
          </div>
