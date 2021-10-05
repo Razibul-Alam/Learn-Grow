@@ -16,7 +16,7 @@ const AddCourses = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Control type="file" placeholder="Upload" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary">
           Submit
         </Button>
       </Form>

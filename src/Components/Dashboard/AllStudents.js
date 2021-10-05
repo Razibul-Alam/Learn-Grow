@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
+import AddStudent from './AddStudent';
 
 const AllStudents = () => {
-    const [students,setStudents]=useState([])
+
+  const removeStudent=(id)=>{
+const remainStudents=students.filter(student=>student.id!==id)
+setStudents(remainStudents)
+  }
+    const [students,setStudents]=useState([{id:1,name:'mark',email:'mark1232@gmail.com',course:'English Spoken'}])
     return (
+      <>
+    <AddStudent students={students} setStudents={setStudents}/>
         <Table striped bordered hover size="sm" className="mt-5">
   <thead>
     <tr>
-      <th>#</th>
+      <th>Id</th>
       <th>Name</th>
       <th>Email</th>
       <th>Course</th>
@@ -16,25 +24,25 @@ const AllStudents = () => {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>mark1234@gmail.com</td>
-      <td>English Spoken
+   {students.map(student=>{
+     const{id,name,email,course}=student
+     return(
+      <tr>
+      <td>{id}</td>
+      <td>{name}</td>
+      <td>{email}</td>
+      <td>{course}
       </td>
       <td>
-          <Button className="btn btn-danger">Remove
+          <Button className="btn btn-danger" onClick={()=>{removeStudent(id)}}>Remove
           </Button>
       </td>
     </tr>
-    <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>jacob@gmail.com</td>
-      <td>Cartoon Animation</td>
-    </tr>
+     )
+   })}
   </tbody>
 </Table>
+</>
     );
 };
 

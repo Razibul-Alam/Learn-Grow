@@ -14,18 +14,18 @@ const DashBoard = () => {
 
      <div className="d-flex justify-content-center mt-2">
      <ButtonGroup vertical>
-  <Button className='mt-3'onClick={()=>setShow(0)}>Add Courses</Button>
+     <Button className='mt-3'  onClick={()=>setShow(0)}>Student Management</Button>
+  <Button className='mt-3'onClick={()=>setShow(3)}>Add Course</Button>
   <Button className='mt-3'  onClick={()=>setShow(2)}>Sold Items</Button>
-  <Button className='mt-3'  onClick={()=>setShow(3)}>Student Management</Button>
   <Button className='mt-3'  onClick={()=>setShow(1)}>Privacy & Settings</Button>
 </ButtonGroup>
      </div>
         </div>
         <div className="col-lg-7">
-            {show<1&&<AddCourses/>}
+            {show<1&&<AllStudents/>}
             {show>0&&show<2&&<Privacy/>}
             {show>1&&show<3&&<SoldCourses/>}
-            {show>2&&<AllStudents/>}
+            {show>2&&<AddCourses/>}
         </div>
         </section>
         </>
