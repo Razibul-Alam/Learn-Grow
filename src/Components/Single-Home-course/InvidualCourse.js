@@ -3,7 +3,7 @@ import { Card, CardGroup, Button } from 'react-bootstrap';
 const InvidualCourse = ({course}) => {
     const{title,imgUrl,tutor,price}=course;
     return (
-        <div className='col-lg-4 text-center'>
+        <div className='col-lg-3 text-center'>
              <CardGroup>
         <Card>
           <Card.Img variant="top" src={imgUrl} />
@@ -15,7 +15,7 @@ const InvidualCourse = ({course}) => {
             <Card.Text>
              <h6>Price: {price}</h6>
             </Card.Text>
-            <Button variant="primary">Buy Course</Button>
+            <Button variant="primary">Enroll</Button>
           </Card.Body>
         </Card>
       </CardGroup>

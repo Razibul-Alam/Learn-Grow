@@ -8,7 +8,7 @@ const BannerSection = () => {
           <div className='col-lg-6 mb-2'>
               <div className='text-center'>
               <h2>Come Learn With Us</h2>
-              <h5>Become an instructor and change <br /> lives — including your own</h5>
+        <h5>Become a skilled person and change <br /> lives — including your own</h5>
               <Button variant="primary" size="lg">
       Get Started
     </Button>
